@@ -16,7 +16,6 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.concurrent.atomic.AtomicInteger;
 
 import static org.lwjgl.opengl.GL11.glScaled;
 
@@ -138,18 +137,17 @@ public class ModuleComponent extends DrawableComponent {
         if (module != null) {
 
             // module name
-            glScaled(0.8, 0.8, 0.8); {
+            glScaled(1.05, 1.05, 1.05);{
 
                 // scaled position
-                float scaledX = (categoryFrameComponent.getPosition().x + 4) * 1.25F;
-                float scaledY = (featureHeight + 4.5F) * 1.25F;
-                float scaledWidth = (categoryFrameComponent.getPosition().x + categoryFrameComponent.getWidth() - (FontUtil.getStringWidth("...") * 0.8F) - 3) * 1.25F;
+                float scaledX = (categoryFrameComponent.getPosition().x + 4) * 0.95238095F;
+                float scaledY = (featureHeight + 4.5F) * 0.95238095F;
+                float scaledWidth = (categoryFrameComponent.getPosition().x + categoryFrameComponent.getWidth() - (FontUtil.getStringWidth("...") * 1.05F) - 3) * 0.95238095F;
 
                 FontUtil.drawStringWithShadow(getModule().getName(), scaledX, scaledY, getModule().isEnabled() ? ColorUtil.getPrimaryColor().getRGB() : Color.WHITE.getRGB());
                 FontUtil.drawStringWithShadow("...", scaledWidth, scaledY - 3, new Color(255, 255, 255).getRGB());
             }
-
-            glScaled(1.25, 1.25, 1.25);
+            glScaled(0.95238095, 0.95238095, 0.95238095);
         }
     }
 

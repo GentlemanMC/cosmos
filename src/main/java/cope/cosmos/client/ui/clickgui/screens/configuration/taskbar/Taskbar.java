@@ -38,15 +38,10 @@ public class Taskbar extends DrawableComponent {
 
         glPushMatrix();
 
-        // player name scaled width
-        float scaledWidth = (FontUtil.getStringWidth(mc.player.getName()) + 8) * 2.75F;
-
-        RenderUtil.drawRect(0, resolution.getScaledHeight() - 44, scaledWidth, 44, new Color(23, 23, 29));
-
-        // player info
+        // player name on the taskbar
         glScaled(2.75, 2.75, 2.75); {
             float scaledX = 7 * 0.36363636F;
-            float scaledY = (resolution.getScaledHeight() - 35) * 0.36363636F;
+            float scaledY = (resolution.getScaledHeight() - 28) * 0.36363636F;
             FontUtil.drawStringWithShadow(mc.player.getName(), scaledX, scaledY, ColorUtil.getPrimaryColor().getRGB());
         }
 
