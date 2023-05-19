@@ -74,7 +74,7 @@ public class FontImage implements Wrapper {
             // font character
             CharacterLocation fontCharacter = characterLocations[index];
 
-            // add to wdith
+            // add to width
             if (characterLocations.length <= index || fontCharacter == null) {
                 width += mc.fontRenderer.getStringWidth(String.valueOf(character)) / 4;
                 continue;
